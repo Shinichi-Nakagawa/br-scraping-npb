@@ -3,6 +3,31 @@ from service import get_element
 
 
 class Batter:
+    COLUMNS = [
+        'url',
+        'name',
+        'G',
+        'PA',
+        'AB',
+        'R',
+        'H',
+        '2B',
+        '3B',
+        'HR',
+        'RBI',
+        'SB',
+        'CS',
+        'BB',
+        'SO',
+        'BA',
+        'OPS',
+        'TB',
+        'GIDP',
+        'HBP',
+        'SH',
+        'SF',
+        'IBB',
+    ]
 
     @classmethod
     def get_player_npb_stats(cls, url: str, name: str, response: HTMLResponse) -> list:

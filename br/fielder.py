@@ -3,6 +3,30 @@ from service import get_element
 
 
 class Fielder:
+    COLUMNS = [
+        'url',
+        'name',
+        'POS',
+        'G',
+        'GS',
+        'CG',
+        'Inn',
+        'Ch',
+        'PO',
+        'A',
+        'E',
+        'DP',
+        'Fld_per',
+        'RF9',
+        'RFG',
+        'PB',
+        'WP',
+        'SB',
+        'CS',
+        'CS_per',
+        'lg_CS_per',
+        'PickOff',
+    ]
 
     @classmethod
     def get_player_npb_stats(cls, url: str, name: str, response: HTMLResponse) -> list:
