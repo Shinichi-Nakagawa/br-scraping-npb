@@ -1,4 +1,13 @@
+import csv
 from requests_html import HTMLResponse, HTMLSession, Element
+
+
+def write_csv(filename: str, rows: list, fieldnames: list):
+    with open(filename, 'w') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+
+        writer.writeheader()
+        writer.writerows(rows)
 
 
 def get_page(url: str) -> HTMLResponse:

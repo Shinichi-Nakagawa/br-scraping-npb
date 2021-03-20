@@ -3,6 +3,39 @@ from service import get_element
 
 
 class Pitcher:
+    COLUMNS = [
+        'url',
+        'name',
+        'W',
+        'L',
+        'W_per',
+        'ERA',
+        'RA9',
+        'G',
+        'GS',
+        'GF',
+        'CG',
+        'SHO',
+        'SV',
+        'IP',
+        'H',
+        'R',
+        'ER',
+        'HR',
+        'BB',
+        'IBB',
+        'SO',
+        'HBP',
+        'BK',
+        'WP',
+        'BF',
+        'WHIP',
+        'H9',
+        'HR9',
+        'BB9',
+        'SO9',
+        'SO_per_BB',
+    ]
 
     @classmethod
     def get_player_npb_stats(cls, url: str, name: str, response: HTMLResponse) -> list:

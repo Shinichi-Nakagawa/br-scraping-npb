@@ -3,17 +3,9 @@ import os
 import csv
 import click
 
-from service import get_page
+from service import get_page, write_csv
 from br.batter import Batter
 from br.fielder import Fielder
-
-
-def write(filename: str, rows: list, fieldnames: list):
-    with open(filename, 'w') as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-
-        writer.writeheader()
-        writer.writerows(rows)
 
 
 def run(filename: str):
@@ -34,9 +26,9 @@ def run(filename: str):
         ))
     # 成績を保存
     file_atbat = f"dataset/stats_batting_{os.path.basename(filename)}"
-    write(filename=file_atbat, rows=stats_npb_bats, fieldnames=Batter.COLUMNS)
+    write_csv(filename=file_atbat, rows=stats_npb_bats, fieldnames=Batter.COLUMNS)
     file_fileding = f"dataset/stats_filding_{os.path.basename(filename)}"
-    write(filename=file_fileding, rows=stats_npb_fileds, fieldnames=Fielder.COLUMNS)
+    write_csv(filename=file_fileding, rows=stats_npb_fileds, fieldnames=Fielder.COLUMNS)
 
 
 @click.command()
