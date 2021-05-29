@@ -3,8 +3,8 @@ import csv
 from requests_html import HTMLSession
 
 URLS = {
-    'PACIFIC': 'https://www.baseball-reference.com/register/league.cgi?id=30c06d74',
-    'CENTRAL': 'https://www.baseball-reference.com/register/league.cgi?id=4b244907',
+    'PACIFIC': 'https://www.baseball-reference.com/register/league.cgi?id=16632292',
+    'CENTRAL': 'https://www.baseball-reference.com/register/league.cgi?id=0549ac26',
 }
 
 session = HTMLSession()
