@@ -13,10 +13,16 @@ $ poetry install
 
 ## use 
 
+### team list
+
+```bash
+$ python teams.py
+```
+
 ### player list
 
 ```bash
-$ python playesr.py
+$ python players.py
 ```
 
 ### stats batting + batter fielding
