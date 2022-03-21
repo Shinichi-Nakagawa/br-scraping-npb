@@ -16,7 +16,7 @@ def get_page(url: str) -> HTMLResponse:
     """
     session = HTMLSession()
     response = session.get(url)
-    response.html.render(timeout=60)
+    response.html.render(timeout=120)
     return response
 
 
