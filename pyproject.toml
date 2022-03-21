@@ -9,6 +9,7 @@ python = "^3.10"
 requests-html = "^0.10.0"
 click = "^7.1.2"
 pandas = "^1.2.4"
+numpy = "^1.22.2"
 
 [tool.poetry.dev-dependencies]
 

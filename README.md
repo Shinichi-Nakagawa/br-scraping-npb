@@ -3,7 +3,7 @@ Baseball Reference Scraping for NPB
 
 ## Python Version
 
-3.9+
+3.10+
 
 ## install
 
