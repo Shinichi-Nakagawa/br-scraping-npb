@@ -9,7 +9,7 @@ with open('dataset/teams.csv', 'r') as f:
 
 session = HTMLSession()
 
-fieldnames = ['team', 'team_url', 'player_name', 'player_url']
+fieldnames = ['team', 'team_url', 'player_name', 'player_url', 'age']
 
 
 def players(tbody) -> list:
@@ -20,7 +20,8 @@ def players(tbody) -> list:
             continue
         url = a.absolute_links.pop()
         name = tr.text.split('\n')[1].replace('*', '')
-        result.append({'team': team['team'], 'team_url': team['url'], 'player_name': name, 'player_url': url})
+        age = tr.text.split('\n')[2].replace('*', '')
+        result.append({'team': team['team'], 'team_url': team['url'], 'player_name': name, 'player_url': url, 'age': age})
     return result
 
 

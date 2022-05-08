@@ -6,6 +6,7 @@ class Pitcher:
     COLUMNS = [
         'url',
         'name',
+        'Age',
         'W',
         'L',
         'W_per',
@@ -58,6 +59,7 @@ class Pitcher:
         return {
             'url': url,
             'name': name,
+            'Age': element.find('td:nth-child(4)', first=True).text,
             'W': element.find('td:nth-child(5)', first=True).text,
             'L': element.find('td:nth-child(6)', first=True).text,
             'W_per': element.find('td:nth-child(7)', first=True).text,
