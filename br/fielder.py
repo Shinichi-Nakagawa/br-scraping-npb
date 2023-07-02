@@ -6,6 +6,7 @@ class Fielder:
     COLUMNS = [
         'url',
         'name',
+        'Age',
         'POS',
         'G',
         'GS',
@@ -49,6 +50,7 @@ class Fielder:
         return {
             'url': url,
             'name': name,
+            'Age': element.find('td:nth-child(4)', first=True).text,
             'POS': element.find('td:nth-child(5)', first=True).text,
             'G': element.find('td:nth-child(6)', first=True).text,
             'GS': element.find('td:nth-child(7)', first=True).text,

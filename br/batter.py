@@ -6,6 +6,7 @@ class Batter:
     COLUMNS = [
         'url',
         'name',
+        'Age',
         'G',
         'PA',
         'AB',
@@ -52,6 +53,7 @@ class Batter:
         return {
             'url': url,
             'name': name,
+            'Age': element.find('td:nth-child(4)', first=True).text,
             'G': element.find('td:nth-child(5)', first=True).text,
             'PA': element.find('td:nth-child(6)', first=True).text,
             'AB': element.find('td:nth-child(7)', first=True).text,
